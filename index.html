@@ -8,8 +8,8 @@
     <title>نفنوف</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
     <link rel="stylesheet" href="index.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+	<script class="u-script" type="text/javascript" src="jquery.js"></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js"></script>
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -31,28 +31,9 @@
         <h2 class="u-text u-text-1">نفنوف </h2>
         <h5 class="u-text u-text-2">nefnof.ir</h5>
         <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-no-transition u-show-text-on-hover u-gallery-1">
-          <div class="u-gallery-inner u-gallery-inner-1">
-            <div class="u-effect-fade u-gallery-item">
-              <div class="u-back-slide" data-image-width="748" data-image-height="1000">
-                <img class="u-back-image u-expanded" src="images/2.webp">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-1"></div>
-            </div>
-            <div class="u-effect-fade u-gallery-item">
-              <div class="u-back-slide" data-image-width="1616" data-image-height="1616">
-                <img class="u-back-image u-expanded" src="images/3.webp">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-2"></div>
-            </div>
-            <div class="u-effect-fade u-gallery-item" data-image-width="666" data-image-height="1000">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded" src="images/1.webp">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-3"></div>
-            </div>
-          </div>
+          <div class="u-gallery-inner u-gallery-inner-1"></div>
         </div>
-        <p class="u-align-center u-custom-font u-text u-text-3"> نفنوف و ثوب در لباس‌های عربی خوزستانی:&nbsp; <br>آشنایی با پیراهن‌های محلی در فرهنگ عرب‌های خوزستانی، پیراهن‌های زنان به دو بخش اصلی تقسیم می‌شوند: نفنوف و ثوب. نفنوف به عنوان پیراهن بلند و ساده توصیف می‌شود که اغلب با رنگ‌های تند برای زنان جوان و رنگ‌های تیره برای زنان میانسال و پیر ساخته می‌شود. از سوی دیگر، ثوب یک پیراهن توری با آستین‌های پهن و رنگ‌های تیره است که معمولاً گران قیمت و تا نیمه ساق پا بلند است. با این توضیحات، آشنا شدن با این دو بخش اساسی از لباس‌های محلی عرب‌های خوزستانی را آسان‌تر می‌کند.&nbsp; </p>
+        <p class="u-align-justify u-custom-font u-text u-text-3"> نفنوف و ثوب در لباس‌های عربی خوزستانی:&nbsp; <br>آشنایی با پیراهن‌های محلی در فرهنگ عرب‌های خوزستانی، پیراهن‌های زنان به دو بخش اصلی تقسیم می‌شوند: نفنوف و ثوب. نفنوف به عنوان پیراهن بلند و ساده توصیف می‌شود که اغلب با رنگ‌های تند برای زنان جوان و رنگ‌های تیره برای زنان میانسال و پیر ساخته می‌شود. از سوی دیگر، ثوب یک پیراهن توری با آستین‌های پهن و رنگ‌های تیره است که معمولاً گران قیمت و تا نیمه ساق پا بلند است. با این توضیحات، آشنا شدن با این دو بخش اساسی از لباس‌های محلی عرب‌های خوزستانی را آسان‌تر می‌کند.&nbsp; </p>
       </div>
     </section>
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-36cd">
@@ -61,5 +42,32 @@
         </p>
       </div>
     </footer>
+	<script>
+	const galleryData = [{
+        src: "images/1.webp"
+      }, {
+        src: "images/2.webp"
+      }, {
+        src: "images/3.webp"
+      }];
+      const fragment = document.createDocumentFragment();
+      const galleryInner = document.querySelector('.u-gallery-inner-1');
+      galleryData.forEach((item, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.classList.add('u-effect-fade', 'u-gallery-item');
+        const backSlide = document.createElement('div');
+        backSlide.classList.add('u-back-slide');
+        const image = document.createElement('img');
+        image.classList.add('u-back-image', 'u-expanded');
+        image.src = item.src;
+        backSlide.appendChild(image);
+        galleryItem.appendChild(backSlide);
+        const overSlide = document.createElement('div');
+        overSlide.classList.add('u-over-slide', 'u-shading', `u-over-slide-${index + 1}`);
+        galleryItem.appendChild(overSlide);
+        fragment.appendChild(galleryItem);
+      });
+      galleryInner.appendChild(fragment);
+	</script>
   </body>
 </html>
