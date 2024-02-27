@@ -59,7 +59,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="u-align-center u-clearfix u-section-1" id="carousel_10ab">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-1">نفنوف </h2>
-        <h5 class="u-text u-text-2">nefnof.ir</h5>
+        <h2 class="u-text u-text-2">nefnof.ir</h2>
         <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-no-transition u-show-text-on-hover u-gallery-1">
           <div class="u-gallery-inner u-gallery-inner-1"></div>
         </div>
@@ -73,7 +73,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </footer>
 	<script>
-	const galleryData = [{
+
+     let galleryData = [];
+     var userAgent = navigator.userAgent;
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+       
+      galleryData =[{
+        src: "images/1-mobile.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
+      }, {
+        src: "images/2-mobile.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
+      }, {
+        src: "images/3-mobile.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
+      },{
+        src: "images/4-mobile.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
+      }, {
+        src: "images/5-mobile.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
+      }, {
+        src: "images/6-mobile.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
+      },{
+        src: "images/7-mobile.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
+      }, {
+        src: "images/8-mobile.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
+      }, {
+        src: "images/9-mobile.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
+      }];
+
+        } else {
+      galleryData = [{
         src: "images/1.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       }, {
         src: "images/2.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
@@ -92,6 +119,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }, {
         src: "images/9.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       }];
+        }
+	 
       const fragment = document.createDocumentFragment();
       const galleryInner = document.querySelector('.u-gallery-inner-1');
       galleryData.forEach((item, index) => {
