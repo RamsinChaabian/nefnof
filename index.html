@@ -74,23 +74,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 	<script>
 	const galleryData = [{
-        src: "images/1.webp"
+        src: "images/1.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       }, {
-        src: "images/2.webp"
+        src: "images/2.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       }, {
-        src: "images/3.webp"
+        src: "images/3.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       },{
-        src: "images/4.webp"
+        src: "images/4.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       }, {
-        src: "images/5.webp"
+        src: "images/5.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       }, {
-        src: "images/6.webp"
+        src: "images/6.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       },{
-        src: "images/7.webp"
+        src: "images/7.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       }, {
-        src: "images/8.webp"
+        src: "images/8.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       }, {
-        src: "images/9.webp"
+        src: "images/9.webp",alt:"لباس عربی زنانه شیک و اسپرت از نفنوف"
       }];
       const fragment = document.createDocumentFragment();
       const galleryInner = document.querySelector('.u-gallery-inner-1');
@@ -102,6 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const image = document.createElement('img');
         image.classList.add('u-back-image', 'u-expanded');
         image.src = item.src;
+        image.alt=item.alt;
         backSlide.appendChild(image);
         galleryItem.appendChild(backSlide);
         const overSlide = document.createElement('div');
